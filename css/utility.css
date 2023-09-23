@@ -1,0 +1,156 @@
+html, body{
+    font-family: 'Open Sans', sans-serif;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Raleway', sans-serif;
+}
+a{
+    color: var(--dark);
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+button, input[type = "submit"]{
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    border-radius: 2rem;
+    
+}
+.container{
+    max-width: 1320px;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+.flex{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+.text{
+    font-weight: 400;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+/* Style the dropdown menu */
+.form-control {
+    width: 100%;
+    margin: 0.6rem 0;
+    max-width: 500px;
+    border: 1px solid #fff;
+    border-radius: 0.2rem;
+    padding: 0.7rem;
+    font-size: 1rem;
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    background-color: transparent;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Style the dropdown options */
+.form-control option {
+    color: var(--green); /* Set the default color of the options to green */
+    font-weight: 600;
+}
+
+.form-control option:hover {
+    background-color: var(--green);
+}
+
+/* Style the selected option */
+.form-control::-webkit-datetime-edit, .form-control::-webkit-inner-spin-button, .form-control::-webkit-clear-button, .form-control::-webkit-calendar-picker-indicator {
+    color: #fff; /* Set the color of the selected option text to white */
+}
+
+/* Define the button with blurred background */
+.btn {
+    padding: 0.7rem 2.4rem;
+    border-radius: 0.2rem;
+    font-weight: 600;
+    background-color: transparent; /* Initially transparent background */
+    color: var(--green); /* Text color is the same as the desired background color */
+    border: 1px solid transparent; /* Make the border transparent initially */
+    position: relative; /* Required for pseudo-element */
+    overflow: hidden; /* Hide any overflowing content */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth background and text color transition */
+}
+
+/* Add a pseudo-element for the solid color overlay on hover */
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--green); /* Solid background color */
+    z-index: -1; /* Place behind the button content */
+    transition: transform 0.3s ease; /* Smooth transform transition */
+    transform: scaleX(0); /* Initially scale to 0 width */
+    transform-origin: left center;
+}
+
+/* Apply styles on hover to reveal the solid color */
+.btn:hover {
+    background-color: var(--green); /* Make the background solid on hover */
+    color: #fff; /* Change text color to white on hover */
+    border: 1px solid var(--green); /* Add border on hover */
+}
+
+.btn:hover::before {
+    transform: scaleX(1); /* Scale the pseudo-element to full width on hover */
+}
+
+
+/* css stop transition and animation */
+.resize-animation-stopper *{
+    -webkit-animation: none!important;
+            animation: none!important;
+    -webkit-transition: none!important;
+    -o-transition: none!important;
+    transition: none!important;
+}
+
+.py-4{
+    padding: 4rem 0;
+}
+img{
+    width: 100%;
+    display: block;
+}
+.title-wrap{
+    text-align: center;
+    padding: 1.4rem 0;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.lg-title{
+    font-size: 1.8rem;
+}
+.sm-title{
+    display: block;
+    color: #787878;
+    font-weight: 300;
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+    max-width: 450px;
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 1.7;
+}
+.my-2{
+    margin: 2rem 0;
+}
+.shadow:hover{
+    -webkit-box-shadow: 0px 0px 18px -4px rgba(109, 109, 109, 0.64);
+            box-shadow: 0px 0px 18px -4px rgba(109, 109, 109, 0.64);
+}
