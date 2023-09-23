@@ -37,35 +37,6 @@ window.addEventListener('resize', () => {
 const destinationSelect = document.getElementById('destination');
 const citySelect = document.getElementById('city');
 
-const citiesByState = {
-    'Andhra Pradesh': [
-        'Visakhapatnam', 'Vijayawada', 'Guntur', 'Nellore', 'Kurnool', 'Rajahmundry'
-    ],
-    'Arunachal Pradesh': [
-        'Itanagar', 'Naharlagun', 'Tawang', 'Bomdila', 'Ziro', 'Pasighat'
-    ],
-    'Assam': [
-        'Guwahati', 'Dispur', 'Silchar', 'Dibrugarh', 'Jorhat', 'Tezpur'
-    ],
-    'Bihar': [
-        'Patna', 'Gaya', 'Muzaffarpur', 'Bhagalpur', 'Darbhanga', 'Purnia'
-    ],
-    'Chhattisgarh': [
-        'Raipur', 'Bilaspur', 'Bhilai', 'Korba', 'Durg', 'Raigarh'
-    ],
-    'Goa': [
-        'Panaji', 'Vasco da Gama', 'Margao', 'Mapusa', 'Ponda', 'Salcete'
-    ],
-    'Gujarat': [
-        'Ahmedabad', 'Surat', 'Vadodara', 'Rajkot', 'Bhavnagar', 'Jamnagar'
-    ],
-    'Haryana': [
-        'Chandigarh', 'Faridabad', 'Gurgaon', 'Hisar', 'Rohtak', 'Panipat'
-    ],
-    'Himachal Pradesh': [
-        'Shimla', 'Dharamshala', 'Mandi', 'Solan', 'Kullu', 'Chamba'
-    ],
-};
 
 destinationSelect.addEventListener('change', () => {
     const selectedState = destinationSelect.value;
