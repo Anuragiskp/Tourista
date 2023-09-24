@@ -1657,6 +1657,37 @@ header{
   font-size: 0.5rem;
 }
 
+.news-cards-wrapper{
+  /* display: flex;
+  flex-direction: row; */
+  margin: 5%;
+}
+
+.news-card-container{
+  width: 40%;
+  margin: 5%;
+  display: inline-block;
+  border: rgb(214, 213, 213) solid 1px;
+  padding: 2%;
+  /* display: inline; */
+}
+
+@keyframes shadow{
+  from{box-shadow: none;}
+  to{box-shadow: #a1a1a1 0px 0px 5px;}
+}
+
+.news-card-container:hover{
+  animation-name: shadow;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.news-card{
+  
+  width: 20%;
+}
+
 
 
 /* change background on scroll */
