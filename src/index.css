@@ -416,6 +416,9 @@ template {
       grid-template-columns: repeat(2, 1fr);
       gap: 2rem;
   }
+  .popular-row{
+    margin: 3%;
+  }
   .gallery-item{
       margin: 0;
   }
