@@ -448,6 +448,56 @@ template {
       margin: 0 0.5rem;
   }
   /* navbar */
+
+  .navbar-container{
+    display: flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+    height: 10%;
+    padding-left: 2%;
+    padding-right: 10%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background: white;
+    position:fixed;
+    width: 100%;
+    margin:0;
+    z-index: 10;
+    
+    /* margin-right: 6%; */
+  }
+  #tourista-logo{
+    color: black;
+    display: inline;
+    font-size: 2.5em;
+  }
+
+  .navbar-links{
+    /* display: inline; */
+  }
+  .navbar-link{
+    color: black;
+    padding: 3%;
+    font-size: 1.5em;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 5px;
+    font-weight: 600;
+    
+    /* display: inline; */
+    }
+
+    @keyframes link-hover{
+      from{color: black}
+      to{ color: rgb(7, 169, 125);}
+    }
+  .navbar-link:hover{
+    animation-name:link-hover;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    text-decoration: none;
+  }
   #navbar-show-btn{
       display: none;
   }
@@ -550,6 +600,65 @@ template {
 @media screen and (min-width: 1400px){
   .featured-row, .services-row{
       grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* TOURIST PLACE INDIVIDUAL */
+
+/* Basic styling for the profile container */
+.profile-container {
+  max-width: 100%;
+  padding: 20px;
+}
+
+/* Styling for the profile image */
+.profile-image {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 1.5rem;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Styling for profile name and headline */
+.profile-name {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.profile-headline {
+  font-style: italic;
+  color: #666;
+  text-align: center;
+}
+
+/* Styling for the profile components */
+.profile-component {
+  margin-top: 20px;
+}
+
+.profile-component h2, .profile-component h4 {
+  text-align: center;
+}
+
+.star-rating {
+  color: #FFD700;
+  text-align: center;
+}
+
+/* Styling for the description text */
+.des {
+  text-align: justify;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .profile-image {
+      max-width: 100%;
   }
 }
 

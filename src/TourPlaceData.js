@@ -371,5 +371,4 @@ export default [
         description: "lorem impus dolor sit amet",
         url:"https://upload.wikimedia.org/wikipedia/commons/f/fc/LotusDelhi.jpg"
     },
-
 ]

@@ -2,13 +2,14 @@ import Navbar from './Navbar';
 import HeaderIndex from './HeaderIndex';
 import Body from './Body';
 import Footer from './Footer';
+import PopPlaces from './PopPlaces';
 
-function Homepage() {
+function Homepage({setSiteInfo}) {
     return (
-      <div className="App">
+      <div className="Homepage">
         <Navbar />
         <HeaderIndex />
-        <Body />
+        <PopPlaces setSiteInfo = {setSiteInfo}/>
         <Footer />
       </div>
     );
