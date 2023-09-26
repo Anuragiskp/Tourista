@@ -3,21 +3,34 @@ import News from './Components/News';
 import Health from './Components/Health';
 import About from './Components/About';
 import Contact from './Components/Contact';
-import Navbar from './Components/Navbar';
+import TouristPlace from './Components/TouristPlace';
+import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import './index.css';
 
 function App() {
+
+  const [siteInfo, setSiteInfo] = React.useState({});
+  console.log(siteInfo);
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Navbar />}>
-          <Route index element={<Homepage />} />
-          <Route path="/news" element={<News />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/health" element={<Health />} />
-          <Route path="/about" element={<About />} />
-        </Route>
+        <Route path="/" element={<Homepage setSiteInfo = {setSiteInfo}/>} />
+      </Routes>
+      <Routes>
+        <Route path="/news" element={<News />} />
+      </Routes>
+      <Routes>
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+      <Routes>
+        <Route path="/health" element={<Health />} />
+      </Routes>
+      <Routes>
+        <Route path="/about" element={<About />} />
+      </Routes>
+      <Routes>
+        <Route path={"/site/" + siteInfo.city} element={<TouristPlace siteInfo = {siteInfo}/>} />
       </Routes>
     </BrowserRouter>
   );

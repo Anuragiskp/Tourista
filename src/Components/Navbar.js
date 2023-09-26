@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Outlet, Link } from 'react-router-dom';
+import { Box, Container } from '@mui/material';
 
 function Navbar() {
 
     return (
       <div className="Navbar">
-        <nav className = "navbar">
+        {/* <nav className = "navbar">
             <div className = "container flex">
                 <a href = "index.html" className = "site-brand">
                     Tour<span>ista</span>
@@ -37,9 +38,24 @@ function Navbar() {
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav> */}
+
+        <div className="navbar-container">
+            <Box className="logo-container">
+                <h1 id="tourista-logo">Tourista</h1>
+            </Box>
+           
+            <Box className='navbar-links'>
+                <Link to="/" className = "navbar-link">Home</Link>
+                <Link to="/health" className = "navbar-link">Health</Link>
+                <Link to ="/news" className = "navbar-link">News</Link>
+                <Link to ="/about" className = "navbar-link">About</Link>
+                <Link to = "/contact" className = "navbar-link">Contact</Link>
+            </Box>
+        </div>
         <Outlet />
-      </div>
+    </div>
+    
     );
   }
   

@@ -1,15 +1,20 @@
+import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import TourPlaceData from '../TourPlaceData';
 import React from 'react';
 import TouristPlace from './TouristPlace';
 
-function PopPlaces() {
+function PopPlaces({setSiteInfo}) {
 
     const [siteData, setSiteData] = React.useState(TourPlaceData);
 
     const displaySite = siteData.map(site =>{
+        
+        setSiteInfo(site);
+
+
         return  <div class = "popular-item shadow">
-            <img src = {site.url} alt = "" />
+            <img class = "pop-item" src = {site.url} alt = "" />
             <div><i class = "fas fa-map-marker-alt"></i>
                 <span>{site.name}</span>
                 <ul class = "rating flex">
@@ -22,10 +27,9 @@ function PopPlaces() {
                     <li>{site.state}</li>
                     <br></br>
                 </ul>
-                    <Link to="/site" element={<TouristPlace />} siteData = {site}>Visit Site </Link>
+                <Link to="/site" >Visit Site </Link>
             </div>
         </div>
-    
     })
 
 

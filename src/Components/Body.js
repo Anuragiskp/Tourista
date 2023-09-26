@@ -1,9 +1,9 @@
 import PopPlaces from './PopPlaces';
 
-function Body() {
+function Body({setSiteInfo}) {
     return (
       <div className="Body">
-        <PopPlaces />
+        <PopPlaces setSiteInfo = {setSiteInfo}/>
       </div>
     );
   }
