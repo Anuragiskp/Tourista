@@ -2140,6 +2140,10 @@ header.header-sm{
   opacity: 0.95;
 }
 
+.pop-item {
+  height: 250px;
+}
+
 /* ### BLOG PAGE ### */
 /* blog */
 :root {

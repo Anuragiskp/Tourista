@@ -14,7 +14,7 @@ function PopPlaces({setSiteInfo}) {
 
 
         return  <div class = "popular-item shadow">
-            <img src = {site.url} alt = "" />
+            <img class = "pop-item" src = {site.url} alt = "" />
             <div><i class = "fas fa-map-marker-alt"></i>
                 <span>{site.name}</span>
                 <ul class = "rating flex">
