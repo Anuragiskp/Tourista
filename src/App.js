@@ -6,6 +6,7 @@ import Contact from './Components/Contact';
 import TouristPlace from './Components/TouristPlace';
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import KommunicateChat from './chat';
 // import './index.css';
 
 function App() {
@@ -31,7 +32,8 @@ function App() {
       </Routes>
       <Routes>
         <Route path={"/site/" + siteInfo.city} element={<TouristPlace siteInfo = {siteInfo}/>} />
-      </Routes>
+      </Routes>  
+      <KommunicateChat/>
     </BrowserRouter>
   );
 }
